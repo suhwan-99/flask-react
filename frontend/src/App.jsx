@@ -6,6 +6,8 @@ import Login from './Login'
 import Write from './write'
 import Detail from './detail'
 import Edit from './edit'
+import Recommend from './Recommend'
+
 
 import { useEffect, useState } from 'react'
 function App() {
@@ -43,7 +45,7 @@ function App() {
 
           : <Link to='/login'>==로그인== </Link>
         }
-        
+        <Link to='/recommend' >==음식 추천</Link>
         <Link to='/write'>=== 글 작성===</Link>
       </header>
 
@@ -54,6 +56,7 @@ function App() {
         <Route path='/write' element={<Write /> } />
         <Route path='/post/:id' element={<Detail />}/>
         <Route path='/edit/:id' element={<Edit />} />
+        <Route path='/recommend' element={<Recommend /> } />
       </Routes>
 
     </>
